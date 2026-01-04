@@ -1,0 +1,1349 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Quicksand", Arial, sans-serif;
+  background: #f6efe6;
+  color: #2b1f17;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Header */
+.site-header {
+  background: #ebe1c2;
+  border-bottom: 2px solid #1a1b0e;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  gap: 15px;
+}
+
+.brand {
+  text-decoration: none;
+  color: #2b1f17;
+}
+
+.brand-name {
+  font-family: "Fraunces", serif;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.brand-tagline {
+  display: block;
+  font-size: 20px;
+  color: #5b463a;
+  margin-top: 2px;
+}
+
+/* Nav */
+.nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #2b1f17;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 14px;
+  border: 2px solid transparent;
+}
+
+.nav-link:hover {
+  background: #E7D9B8;
+  border: 2px solid #2b1f17;
+}
+
+.nav-link.active {
+ background: #F2E88C;  /* soft buttery yellow */
+color: #2B1F17;
+border: 2px solid #2B1F17;
+}
+
+/* Hero */
+.hero {
+  padding: 44px 0;
+  background-color: #f6efe6;
+  border-bottom: 2px solid #2b1f17;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.tiny-badge {
+  display: inline-block;
+  background: #fffaf3;
+  border: 2px solid #2b1f17;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  margin: 0 0 12px 0;
+}
+
+.hero-title {
+  font-family: "Fraunces", serif;
+  font-size: 46px;
+  line-height: 1.1;
+  margin: 0 0 10px 0;
+}
+
+.hero-subtitle {
+  margin: 0 0 18px 0;
+  color: #5b463a;
+  max-width: 55ch;
+}
+
+.hero-stickers {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 14px 18px;
+  margin-top: 18px;
+  margin-bottom: 28px;
+  max-width: fit-content;
+}
+
+.sticker {
+  background: #fffaf3;
+  border: 2px solid #2b1f17;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-weight: 700;
+  font-size: 13px;
+  box-shadow: 3px 3px 0 #2b1f17;
+  color: #2a1c09;
+}
+
+/* Sticker colors */
+.sticker.h { background:#beeccb; }
+.sticker.s { background:#cbf8f1; }
+.sticker.m { background:#cda38c; }
+.sticker.p { background:#dbe0b6; }
+.sticker.j { background:#a79378; }
+.sticker.f { background:#f1c0ea; }
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 14px;
+  border: 2px solid #2b1f17;
+  font-weight: 800;
+  cursor: pointer;
+  background: #fffaf3;
+  color: #2b1f17;
+}
+
+.btn.primary {
+  background: #e98989;
+  color: rgb(41, 32, 32);
+  box-shadow: 4px 4px 0 #2b1f17;
+}
+
+.btn.soft {
+  background: rgba(123, 219, 223, 0.467);
+  box-shadow: 4px 4px 0 #2b1f17;
+  color:rgb(41, 32, 32);
+}
+
+.btn:hover {
+  transform: translateY(5px);
+}
+
+/* Poster */
+.poster {
+  background: #fffaf3;
+  border: 2px solid #2b1f17;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 6px 6px 0 #2b1f17;
+}
+
+.poster-top {
+  margin: 0;
+  font-weight: 800;
+  color: #5b463a;
+}
+
+.poster-title {
+  margin: 8px 0 6px 0;
+  font-family: "Fraunces", serif;
+  font-size: 24px;
+}
+
+.poster-text {
+  margin: 0 0 14px 0;
+  color: #5b463a;
+}
+
+.poster-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.poster-box {
+  border: 2px solid #2b1f17;
+  border-radius: 14px;
+  padding: 10px;
+  font-weight: 800;
+  text-align: center;
+  background: #efe3d2;
+}
+
+.b1 { background: #efe3d2; }
+.b2 { background: rgba(52,160,164,0.18); }
+.b3 { background: rgba(217,122,58,0.22); }
+.b4 { background: rgba(120,84,62,0.18); }
+
+.poster-bottom {
+  margin: 14px 0 0 0;
+  font-weight: 800;
+}
+
+/* Sections */
+.section { padding: 26px 0; }
+
+.section-title {
+  font-family: "Fraunces", serif;
+  margin: 0 0 10px 0;
+}
+
+/* Cards */
+.card {
+  background: #fffaf3;
+  border: 2px solid #2b1f17;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 6px 6px 0 #2b1f17;
+}
+
+.muted { color: #5b463a; }
+.small { font-size: 13px; }
+
+/* Photo row  */
+.photo-row {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.photo-item {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.photo-item img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid #2b1f17;
+  box-shadow: 4px 4px 0 #2b1f17;
+}
+
+/* Reviews (shows 3 at a time, and arrows slide the reviews area only) */
+.reviews-wrap {
+  overflow: hidden;
+}
+.r-section-title{
+  text-align: center;
+}
+.muted{
+  text-align: center;
+}
+
+.reviews {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease;
+  padding-left: 1cm;
+
+}
+
+.review {
+  width: 340px;        
+  flex: 0 0 auto;
+  background: #fffaf3;
+  border: 2px solid #2b1f17;
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 5px 5px 0 #2b1f17;
+}
+
+.quote { margin: 0 0 12px 0; font-style: italic; }
+
+.review-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #2b1f17;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  background: #efe3d2;
+}
+
+.a2 { background: rgba(49, 153, 156, 0.647); }
+.a3 { background: rgba(217, 122, 58, 0.59); }
+.a4 { background: rgba(242, 221, 179, 0.696); }
+.a5 { background: rgba(217, 182, 163, 0.629); }
+.a6 { background: rgba(120, 84, 62, 0.589); }
+
+.name { margin: 0; font-weight: 900; }
+
+.review-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+
+
+/* Who Geek Up is for */
+.who-card {
+  background: linear-gradient(
+    135deg,
+    #fffaf3 60%,
+    rgba(217,122,58,0.12)
+  );
+  border: 2px solid #2b1f17;
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 6px 6px 0 #2b1f17;
+  position: relative;
+}
+
+/* small label */
+.who-eyebrow {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #5b463a;
+  margin: 0 0 6px 0;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+/* main title */
+.who-title {
+  font-family: "Fraunces", serif;
+  font-size: 26px;
+  margin: 0 0 12px 0;
+}
+
+/* list */
+.who-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px 0;
+}
+
+.who-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #2b1f17;
+}
+
+/* cute bullet dots */
+.who-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 22px;
+  color: #d97a3a;
+}
+
+/* footer line */
+.who-footer {
+  margin: 0;
+  font-weight: 800;
+  color: #5b463a;
+}
+/* Footer */
+.footer {
+  border-top: 2px solid #2b1f17;
+  background: #584b3a;
+  padding: 16px 0;
+  margin-top: 3cm;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  color:white;
+}
+
+/*start of contact */
+/* Contact page form */
+.contact-intro {
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  margin-top: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid #2b1f17;
+  font-family: inherit;
+  font-size: 14px;
+  background: #fffaf3;
+}
+
+.form-row {
+  display: flex;
+  gap: 14px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.radio-group,
+.checkbox-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.radio-group label,
+.checkbox-group label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.consent {
+  margin-top: 10px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.contact-note {
+  margin-top: 14px;
+}
+
+/*thank you message*/
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(43, 31, 23, 0.6);
+  display: none; /* hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.thank-you-message {
+  position: relative;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #2b1f17;
+}
+
+.close-btn:hover {
+  color: #d97a3a;
+}
+
+.thank-you-actions {
+  margin-top: 16px;
+}
+
+
+/* end of contact */
+
+/* =========================
+   ABOUT PAGE 
+   ========================= */
+
+/* ABOUT INTRO - make it stronger + more styled */
+.about-page{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.about-top{
+  background: #fffbf6;
+  border: 2px solid #2b1f17;
+  border-radius: 26px;
+  padding: 34px 34px 30px;
+  box-shadow: 10px 10px 0 #2b1f17;
+  margin-bottom: 26px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* fun decoration (no gradient background, just soft shapes) */
+.about-top::before{
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(217, 122, 58, 0.14);
+  top: -70px;
+  right: -70px;
+  border: 2px solid rgba(43, 31, 23, 0.25);
+}
+
+.about-top::after{
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  border-radius: 26px;
+  background: rgba(52, 160, 164, 0.14);
+  bottom: -60px;
+  left: -55px;
+  transform: rotate(10deg);
+  border: 2px solid rgba(43, 31, 23, 0.25);
+}
+
+/* keep text above shapes */
+.about-top > *{
+  position: relative;
+  z-index: 2;
+}
+
+/* badge looks nicer */
+.about-badge{
+  display: inline-block;
+  background: #fffaf3;
+  border: 2px solid #2b1f17;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 900;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  box-shadow: 4px 4px 0 #2b1f17;
+  margin: 0 0 14px 0;
+}
+
+/* title stronger */
+.about-title{
+  font-family: "Fraunces", serif;
+  font-size: 52px;
+  line-height: 1.05;
+  margin: 0 0 14px 0;
+  letter-spacing: 0.2px;
+}
+
+/* paragraphs thicker + more readable */
+.about-text{
+  font-size: 18px;
+  line-height: 1.85;
+  margin: 0 0 14px 0;
+  color: #2b1f17;
+  font-weight: 600; /* this is the main fix */
+}
+
+/* make important words pop */
+.about-text strong{
+  font-weight: 900;
+}
+
+.about-text em{
+  font-style: normal;
+  font-weight: 900;
+  padding: 0 6px;
+  border-radius: 10px;
+  background: rgba(217, 122, 58, 0.18);
+  border: 1px solid rgba(43, 31, 23, 0.25);
+}
+
+/* optional: slightly separate the 2nd paragraph */
+.about-text + .about-text{
+  margin-top: 18px;
+}
+
+/* mini tags container */
+.about-mini-tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start; /* left */
+  align-items: center;
+  margin-top: 14px;
+}
+
+/* each tag */
+.about-mini-tags .mini-tag{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #eee0d7;          
+  border: 2px solid #2b1f17;     /* outline color */
+  color: #2b1f17;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: .2px;
+  box-shadow: 2px 2px 0 #2b1f17;
+}
+
+/*  tiny dot before each tag for a cute touch */
+.about-mini-tags .mini-tag::before{
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(43,31,23,0.35);
+}
+
+/* optional: hover for a little pop */
+.about-mini-tags .mini-tag:hover{
+  transform: translateY(-1px);
+}
+
+/* you can keep these, but now they all look the same */
+.mini-tag.t1, .mini-tag.t2, .mini-tag.t3, .mini-tag.t4{
+  background: #ebe6c7; 
+}
+
+.photo-slot-large{
+  width: 96%;
+  max-width: 100%;
+  border-radius: 22px;
+  overflow: hidden;   /* trims overflow cleanly */
+  border: 2px solid #2b1f17;
+  box-shadow: 6px 6px 0 #2b1f17;
+  background: transparent; /* removes white background */
+  margin-left:20px;
+  margin-right:20px;
+}
+
+.photo-slot-large img{
+  width: 100%;
+  height: auto;        /* THIS prevents cropping */
+  display: block;      /* removes tiny white gaps */
+  object-fit: contain; /* ensures full image is visible */
+
+
+}
+
+
+/* Mission  */
+.mission-fun{
+  border: 2px solid #2b1f17;
+  border-radius: 22px;
+  box-shadow: 6px 6px 0 #2b1f17;
+  background: #fffaf3;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.mission-text{
+  font-weight: 700;
+  color: #5b463a;
+  margin: 0;
+  font-size: 16px;
+}
+
+.mission-list{
+  margin: 0;
+  padding-left: 18px;
+  font-weight: 700;
+}
+
+.mission-list li{
+  margin-bottom: 10px;
+}
+
+.mission-note{
+  margin: 10px 0 0 0;
+  font-weight: 800;
+  color: #2b1f17;
+  background: #d4c9a5;
+  border: 2px solid #2b1f17;
+  border-radius: 18px;
+  padding: 10px 12px;
+  box-shadow: 4px 4px 0 #2b1f17;
+  text-align: center;
+}
+
+/* How this works */
+.how-card{
+  border: 2px solid #2b1f17;
+  border-radius: 22px;
+  box-shadow: 6px 6px 0 #1d120b;
+  background: #fffaf3;
+  padding: 24px;
+}
+
+.how-head{
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.how-sub{
+  margin: 0;
+}
+
+.how-steps{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 14px;
+  margin-bottom: 18px;
+}
+
+.how-step{
+  background: #efe3d2;
+  border: 2px solid #2b1f17;
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 5px 5px 0 #2b1f17;
+  
+}
+
+.hs1{ background: #92b2ad; }
+.hs2{ background: #b994b3; }
+.hs3{ background: #d1d6ab; }
+
+.how-num{
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  border: 2px solid #2b1f17;
+  background: #fffaf3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  margin-bottom: 3px;
+}
+
+.how-title{
+  margin: 0 0 6px 0;
+  font-family: "Fraunces", serif;
+  font-size: 18px;
+  
+}
+
+.how-text{
+  margin: 0;
+  font-weight: 700;
+  color: #2b1f17;
+}
+
+.how-bottom{
+  background: #eae1d4;
+  border: 2px solid #2b1f17;
+  border-radius: 20px;
+  padding: 16px 18px;
+  box-shadow: 5px 5px 0 #2b1f17;
+}
+
+.how-mini-title{
+  margin: 0 0 10px 0;
+  font-family: "Fraunces", serif;
+  font-size: 18px;
+}
+
+/* instructors  */
+
+.team-top{
+  margin-bottom: 16px;
+  padding: 14px 0;
+ 
+}
+
+.team-badge{
+  display: inline-block;
+  border: 2px solid #2b1f17;
+  background: #fffaf3;
+  padding: 7px 12px;
+  border-radius: 12px; 
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  box-shadow: 4px 4px 0 #2b1f17;
+}
+
+.team-title{
+  font-size: 30px;
+  margin: 0 0 8px 0;
+}
+
+.team-intro{
+  margin: 0;
+  text-align: center;
+  max-width: 70ch;
+  color: #5b463a;
+  font-weight: 600;
+ 
+}
+
+.instructors-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 18px;
+  padding-bottom: 26px; /* makes section feel bigger */
+}
+
+/* instructor cards */
+.instructor-card{
+  border: 2px solid #2b1f17;
+  background: #ffffff;
+  border-radius: 22px 10px 22px 10px; 
+  box-shadow: 7px 7px 0 #2b1f17;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 14px;
+  position: relative;
+}
+
+.instructor-card:nth-child(2n){
+  background: #ffffff; 
+}
+
+.instructor-card:nth-child(3n){
+  background: #ffffff; 
+}
+
+.instructor-card:hover{
+  transform: translateY(-2px);
+  transition: 0.2s;
+}
+
+
+/* Instructor photos */
+.inst-photo-slot {
+  width: 100%;
+  height: 180px;              
+  border: 2px solid #2b1f17;
+  border-radius: 18px;
+  overflow: hidden;           /* hides extra parts */
+  background: #fffaf3;
+  box-shadow: 4px 4px 0 #2b1f17;
+}
+
+.inst-photo-slot img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;          /* fills the box nicely */
+  object-position: center;    /* keep face/center in view */
+}
+
+
+/* text */
+.inst-name{
+  margin: 0 0 4px 0;
+  font-family: "Fraunces", serif;
+  font-size: 22px;
+}
+
+.inst-name{
+  margin: 0 0 6px 0;
+  font-family: "Fraunces", serif;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;              /* controls space between name + role */
+}
+
+.inst-role{
+  font-family: "Fraunces", serif; /* same font */
+  font-size: 13px;                /* smaller than name */
+  color: #5b463a;
+  opacity: 0.95;
+}
+
+
+.inst-bio{
+  margin: 0 0 12px 0;
+  font-weight: 600;
+  color: #2b1f17;
+}
+
+/* small chips  */
+.inst-tags{
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip{
+  border: 2px solid #2b1f17;
+  padding: 5px 8px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 12px;
+  background: #ffffff;
+}
+
+/* give chips a little variety */
+.c1{ background:#9ac4a6; }
+.c2{ background:#a1c6c0; }
+.c3{ background:#cea4c8; }
+.c4{ background:#c8cca6; }
+.c5{ background:#ceb2a2; }
+.c6{ background:#a8cfc9; }
+.c7{ background:#a1c8ac; }
+.c8{ background:#c2c6a2; }
+.c9{ background:#c49fbf; }
+.c10{ background:#b1998c; }
+.c11{ background:#a0c3be; }
+.c12{ background:#c1c69f; }
+.c13{ background:#b597b1; }
+.c14{ background:#beeccb; }
+.c15{ background:#9bbbb7; }
+.c16{ background:#acaf8f; }
+.c17{ background:#90af99; }
+.c18{ background:#b391ae; }
+
+
+
+.team-note{
+  margin: 0;
+  font-weight: 800;
+  color: #5b463a;
+  background: #fffaf3;
+  border: 2px solid #2b1f17;
+  padding: 12px 14px;
+  border-radius: 16px;
+  box-shadow: 5px 5px 0 #2b1f17;
+  max-width: 70ch;
+}
+
+.section-title-photos {
+  text-align: center;
+
+}
+
+.workshop-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.workshop-photo{
+  margin: 0;
+  border: 2px solid #2b1f17;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 5px 5px 0 #2b1f17;
+  background: #fffaf3;
+}
+
+.workshop-photo img{
+  width: 100%;
+  height: 300px; /* controls how tall the photos look */
+  object-fit: cover;      /* keeps same size + crops nicely */
+  display: block;
+}
+
+/* =========================
+   COURSES PAGE 
+   ========================= */
+
+.courses-page{
+  padding-top: 34px;
+  padding-bottom: 10px;
+}
+
+.courses-top{
+  background: #fffbf6;
+  border: 2px solid #2b1f17;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 6px 6px 0 #2b1f17;
+  position: relative;
+  overflow: hidden;
+}
+
+.courses-top::before{
+  content:"";
+  position:absolute;
+  inset:-20px;
+  background: radial-gradient(#2b1f1718 1px, transparent 1px);
+  background-size: 16px 16px;
+  transform: rotate(-3deg);
+  pointer-events:none;
+}
+
+.courses-badge{
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  background: #efe3d2;
+  border: 2px solid #2b1f17;
+  border-radius: 16px;
+  padding: 8px 12px;
+  font-weight: 900;
+  margin: 0 0 12px 0;
+}
+
+.courses-title{
+  position: relative;
+  z-index: 1;
+  font-family: "Fraunces", serif;
+  font-size: 40px;
+  margin: 0 0 10px 0;
+}
+
+.courses-sub{
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #5b463a;
+  font-weight: 800;
+  max-width: 75ch;
+}
+
+/* one course per row */
+.courses-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  margin-top: 22px;
+}
+
+/* wider course cards */
+.course-card{
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.course-card.featured{
+  padding: 0;
+}
+
+/* hero image */
+.course-hero{
+  position: relative;
+}
+
+.course-hero img{
+  width: 100%;
+  height: 480px;
+  object-fit:cover;
+  border-bottom: 2px solid #2b1f17;
+ 
+  object-position: center;
+}
+
+
+.course-ribbon{
+  position: absolute;
+  font-weight: 900;
+  font-size: 20px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+ color: rgb(39, 33, 33);
+  left:0%;           /* distance from left edge */
+  top: 90%;             /* move to middle */
+  right:0%;
+  transform: translateY(-50%); /* true vertical centering */
+  z-index: 15;
+}
+
+/* ribbon colors */
+.r1{ background:#cfc1aecd; }
+.r2{ background:#cfc1aecd; }
+.r3{ background:#cfc1aecd; }
+.r4{ background:#cfc1aecd; }
+.r5{ background:#cfc1aecd; }
+.r6{ background:#cfc1aecd; }
+
+/* inside layout */
+.course-content{
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.course-title{
+  font-family: "Fraunces", serif;
+  font-size: 34px;
+  margin: 0 0 10px 0;
+}
+
+.course-desc{
+  color: #2b1f17;
+  font-weight: 800;
+  margin: 0 0 14px 0;
+  max-width: 75ch;
+  font-size: 16px;
+}
+
+
+.course-learn{
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.course-learn h4{
+  margin: 0 0 8px 0;
+  font-weight: 900;
+  font-size: 15px;
+}
+
+.course-learn ul{
+  margin: 0;
+  padding-left: 18px;
+  font-weight: 800;
+  color: #2b1f17;
+}
+
+.course-learn li{
+  margin-bottom: 6px;
+}
+
+/* right panel */
+.course-side{
+  border: 2px solid #2b1f17;
+  border-radius: 18px;
+  padding: 14px;
+  box-shadow: 6px 6px 0 #2b1f17;
+  background: #fffaf3;
+  position: relative;
+  overflow: hidden;
+}
+
+.course-side::before{
+  content:"";
+  position:absolute;
+  inset:-20px;
+  background: radial-gradient(#2b1f1715 1px, transparent 1px);
+  background-size: 14px 14px;
+  transform: rotate(4deg);
+  pointer-events:none;
+}
+/* Big background color for each course card */
+.course-card.c1 { background: #e0d3b9ee; } /* crochet */
+.course-card.c2 { background: #e0d3b9ee; } /* photography */
+.course-card.c3 { background: #e0d3b9ee; } /* clay */
+.course-card.c4 { background: #e0d3b9ee; } /* candles */
+.course-card.c5 { background: #e0d3b9ee; } /* journaling */
+.course-card.c6 { background: #e0d3b9ee; } /* flowers */
+
+
+.course-side > *{
+  position: relative;
+  z-index: 1;
+}
+
+.course-info-title{
+  margin: 0 0 10px 0;
+  font-family: "Fraunces", serif;
+  font-size: 18px;
+}
+
+.course-info{
+  display: grid;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.info-row{
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 10px;
+  border-radius: 14px;
+  border: 2px solid #2b1f17;
+  background: #efe3d2;
+  font-weight: 900;
+}
+
+.info-row span{
+  color: #5b463a;
+  font-weight: 900;
+}
+
+.info-row strong{
+  color: #2b1f17;
+  font-weight: 900;
+}
+
+/* per course color */
+.course-card.c1 .course-side .info-row{ background:#d5cabadb; }
+.course-card.c2 .course-side .info-row{ background:#d5cabadb; }
+.course-card.c3 .course-side .info-row{ background:#d5cabadb;; }
+.course-card.c4 .course-side .info-row{ background:#d5cabadb; }
+.course-card.c5 .course-side .info-row{ background:#d5cabadb; }
+.course-card.c6 .course-side .info-row{ background:#d5cabadb;}
+
+/* instructor link */
+.course-instructor{
+  margin: 0;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.course-instructor a{
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 16px;
+  border: 2px solid #2b1f17;
+  background: #fffaf3;
+  color: #2b1f17;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 4px 4px 0 #2b1f17;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.course-instructor a:hover{
+  transform: translateY(-2px);
+  background: #928278;
+  color: #fff;
+}
+
+.course-instructor a:active{
+  transform: translateY(0);
+  box-shadow: 2px 2px 0 #2b1f17;
+}
+
+
+/*hover for photos*/
+.photo-item {
+  position: relative;
+  width: 250px;
+  height: 180px;
+  border-radius: 16px;
+  overflow: hidden;/*controls what happens when content is bigger than its container*/
+}
+
+/* image */
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: opacity 0.3s ease; /*This enables the fade effect*/
+}
+
+/* text label (hidden by default) */
+.photo-name {
+  position: absolute;
+  inset: 0;
+  background: #ead1c0;
+  color: #fffaf3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Fraunces", serif;
+  font-size: 16px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 10px;
+}
+
+/* hover effect */
+.photo-item:hover img {
+  opacity: 0;/*transparent*/
+}
+
+.photo-item:hover .photo-name {
+  opacity: 1;/*visible*/
+}
+
+/* Fix anchor jump offset, for courses-->about */
+#inst-nour , #inst-fadi, #inst-lina, #inst-maya, #inst-rana, #inst-hala {
+  scroll-margin-top: 120px; /* adjust to your header height */
+}

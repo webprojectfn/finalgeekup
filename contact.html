@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Contact | Geek Up</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-name">Geek Up</span>
+      </a>
+
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="courses.html">Courses</a>
+        <a class="nav-link active" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+<main>
+  <section class="section">
+    <div class="container">
+
+      <div class="card contact-intro">
+        <h1 class="section-title">Get in Touch</h1>
+        <p class="muted">
+          Tell us what you’d like to learn, and we’ll help you find a creative hobby
+          that fits your pace and interests — no pressure, no commitment.
+        </p>
+      </div>
+
+      
+      <form class="card contact-form" action="submitform.php" name="regform" method="post">
+        <h2 class="section-title">Course Registration</h2>
+
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" maxlength="20" name="first_name" required autofocus>
+          </div>
+
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" maxlength="30" name="last_name" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="example@gmail.com" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" maxlength="13" value="+961 " name="phone"  required>
+        </div>
+
+        <div class="form-group">
+          <label>Date of Birth</label>
+          <input type="date" name="dob"   min="1960-01-01" max="2009-12-31">
+        </div>
+
+        <div class="form-group">
+          <label>Hobby / Course</label>
+          <select name="hobby" required>
+            <option value="" selected disabled hidden>Select Your Course</option>
+            <option>Crochet</option>
+            <option>Photography</option>
+            <option>Clay Sculpting</option>
+            <option>Candle Making</option>
+            <option>Journaling&Scrapbooking</option>
+            <option>Flower Arranging</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Experience Level</label>
+          <div class="radio-group">
+            <label><input type="radio" name="level" value="Beginner" required> Beginner</label>
+            <label><input type="radio" name="level" value="Intermediate"> Intermediate</label>
+            <label><input type="radio" name="level"  value="Advanced"> Advanced</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Preferred Schedule</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="schedule" value="Morning"> Morning</label>
+            <label><input type="checkbox" name="schedule" value="Afternoon"> Afternoon</label>
+            <label><input type="checkbox" name="schedule" value="Evening"> Evening</label>
+          </div>
+        </div>
+
+        <div class="form-group consent">
+          <label>
+            <input type="checkbox" required>
+            I agree to be contacted about courses and updates
+          </label>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit" class="btn primary" value="submit">Submit Registration</button>
+          <button type="reset" class="btn soft">Reset Preferences</button>
+        </div>
+      </form>
+
+      
+      <p class="muted small contact-note">
+        Your information is only used to contact you about Geek Up courses.
+      </p>
+
+    </div>
+  </section>
+</main>
+
+
+<div class="overlay" id="thankYouOverlay">
+
+  <div class="card thank-you-message">
+    
+    <button class="close-btn" id="closeThankYou">×</button>
+
+    <h2 class="section-title">Thank You For Submitting!! 🎉</h2>
+
+    <p class="muted">
+      We’ve received your registration and will contact you soon.
+      Until then, keep creating and taking care of your mind ✨
+    </p>
+
+    <div class="thank-you-actions">
+      <a href="index.html" class="btn primary">Go Back to Home</a>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Geek Up</p>
+      <p class="muted small">Creative hobbies for mental well-being</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
