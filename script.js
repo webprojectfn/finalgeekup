@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const formData = new FormData(form);
 
     // 4. Send data to PHP
-    fetch("/geek-up/PROJECT/submitform.php", {
+    fetch("submit_form.php", {
       method: "POST",
       body: formData
     })

@@ -639,62 +639,15 @@ border: 2px solid #2B1F17;
   margin-top: 18px;
 }
 
-/* mini tags container */
-.about-mini-tags{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: flex-start; /* left */
-  align-items: center;
-  margin-top: 14px;
-}
-
-/* each tag */
-.about-mini-tags .mini-tag{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 14px;
-  border-radius: 999px;
-  background: #eee0d7;          
-  border: 2px solid #2b1f17;     /* outline color */
-  color: #2b1f17;
-  font-weight: 700;
-  font-size: 13px;
-  line-height: 1;
-  letter-spacing: .2px;
-  box-shadow: 2px 2px 0 #2b1f17;
-}
-
-/*  tiny dot before each tag for a cute touch */
-.about-mini-tags .mini-tag::before{
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: rgba(43,31,23,0.35);
-}
-
-/* optional: hover for a little pop */
-.about-mini-tags .mini-tag:hover{
-  transform: translateY(-1px);
-}
-
-/* you can keep these, but now they all look the same */
-.mini-tag.t1, .mini-tag.t2, .mini-tag.t3, .mini-tag.t4{
-  background: #ebe6c7; 
-}
 
 .photo-slot-large{
-  width: 96%;
+  width: 100%;
   max-width: 100%;
   border-radius: 22px;
   overflow: hidden;   /* trims overflow cleanly */
   border: 2px solid #2b1f17;
   box-shadow: 6px 6px 0 #2b1f17;
   background: transparent; /* removes white background */
-  margin-left:20px;
-  margin-right:20px;
 }
 
 .photo-slot-large img{
@@ -702,9 +655,8 @@ border: 2px solid #2B1F17;
   height: auto;        /* THIS prevents cropping */
   display: block;      /* removes tiny white gaps */
   object-fit: contain; /* ensures full image is visible */
-
-
 }
+
 
 
 /* Mission  */
@@ -741,7 +693,7 @@ border: 2px solid #2B1F17;
   margin: 10px 0 0 0;
   font-weight: 800;
   color: #2b1f17;
-  background: #d4c9a5;
+  background: #ee9e9e;
   border: 2px solid #2b1f17;
   border-radius: 18px;
   padding: 10px 12px;
@@ -798,7 +750,7 @@ border: 2px solid #2B1F17;
   align-items: center;
   justify-content: center;
   font-weight: 900;
-  margin-bottom: 3px;
+  margin-bottom: 10px;
 }
 
 .how-title{
@@ -1111,35 +1063,33 @@ border: 2px solid #2B1F17;
 
 .course-hero img{
   width: 100%;
-  height: 480px;
-  object-fit:cover;
+  height: 320px;
+  object-fit: cover;
   border-bottom: 2px solid #2b1f17;
- 
-  object-position: center;
+  display:block;
 }
 
 
 .course-ribbon{
   position: absolute;
+  left: 16px;
+  bottom: 16px;
+  padding: 8px 14px;
+  border-radius: 14px;
+  border: 2px solid #2b1f17;
   font-weight: 900;
-  font-size: 20px;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  text-align: center;
- color: rgb(39, 33, 33);
-  left:0%;           /* distance from left edge */
-  top: 90%;             /* move to middle */
-  right:0%;
-  transform: translateY(-50%); /* true vertical centering */
-  z-index: 15;
+  font-size: 13px;
+  box-shadow: 4px 4px 0 #2b1f17;
+  background: #fffaf3;
 }
 
 /* ribbon colors */
-.r1{ background:#cfc1aecd; }
-.r2{ background:#cfc1aecd; }
-.r3{ background:#cfc1aecd; }
-.r4{ background:#cfc1aecd; }
+.r1{ background:#9ec0a799; }
+.r2{ background:#a4c4bfcb; }
+.r3{ background:#bfc3a4d3; }
+.r4{ background:#bda7b9dc; }
 .r5{ background:#cfc1aecd; }
-.r6{ background:#cfc1aecd; }
+.r6{ background:#b8a094b9; }
 
 /* inside layout */
 .course-content{
@@ -1210,14 +1160,6 @@ border: 2px solid #2B1F17;
   transform: rotate(4deg);
   pointer-events:none;
 }
-/* Big background color for each course card */
-.course-card.c1 { background: #e0d3b9ee; } /* crochet */
-.course-card.c2 { background: #e0d3b9ee; } /* photography */
-.course-card.c3 { background: #e0d3b9ee; } /* clay */
-.course-card.c4 { background: #e0d3b9ee; } /* candles */
-.course-card.c5 { background: #e0d3b9ee; } /* journaling */
-.course-card.c6 { background: #e0d3b9ee; } /* flowers */
-
 
 .course-side > *{
   position: relative;
@@ -1258,12 +1200,12 @@ border: 2px solid #2B1F17;
 }
 
 /* per course color */
-.course-card.c1 .course-side .info-row{ background:#d5cabadb; }
-.course-card.c2 .course-side .info-row{ background:#d5cabadb; }
-.course-card.c3 .course-side .info-row{ background:#d5cabadb;; }
-.course-card.c4 .course-side .info-row{ background:#d5cabadb; }
+.course-card.c1 .course-side .info-row{ background:#d5efdcd7; }
+.course-card.c2 .course-side .info-row{ background:#cae7e2e4; }
+.course-card.c3 .course-side .info-row{ background:#d3d7b7e3; }
+.course-card.c4 .course-side .info-row{ background:#d8bad4cb; }
 .course-card.c5 .course-side .info-row{ background:#d5cabadb; }
-.course-card.c6 .course-side .info-row{ background:#d5cabadb;}
+.course-card.c6 .course-side .info-row{ background:#d0b6a8df; }
 
 /* instructor link */
 .course-instructor{
@@ -1343,7 +1285,62 @@ border: 2px solid #2B1F17;
   opacity: 1;/*visible*/
 }
 
-/* Fix anchor jump offset, for courses-->about */
+/* Fix anchor jump offset */
 #inst-nour , #inst-fadi, #inst-lina, #inst-maya, #inst-rana, #inst-hala {
   scroll-margin-top: 120px; /* adjust to your header height */
 }
+
+
+/*start if hover fo photos in about*/
+
+
+.about-photo-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.about-photo {
+  position: relative;
+  border: 2px solid #2b1f17;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 5px 5px 0 #2b1f17;
+  background: #fffaf3;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.about-photo-text {
+  position: absolute;
+  inset: 0;
+  background: #d7bbbb;
+  color: #2b1f17;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Fraunces", serif;
+  font-size: 16px;
+  padding: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.about-photo:hover img {
+  opacity: 0;
+}
+
+.about-photo:hover .about-photo-text {
+  opacity: 1;
+}
+
+
+/*hover for photos*/
